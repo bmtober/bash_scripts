@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Posted by Alister at:
+# http://www.unix.com/shell-programming-and-scripting/157556-factorial-any-number-using-functions.html
+# http://www.unix.com/302512346-post6.html
+
+factorial() {
+          printf '%d %s\n' $1 '1sA [q]sB [d1!<BdlA*sA1-lFx]sF lFx lAp' | dc
+}
+
+factorial $1

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+num=${1}
+den=$(dc <<< "${1} ${2}-p")
+dc <<< "$(factorial ${num}) $(factorial ${den}) /p"

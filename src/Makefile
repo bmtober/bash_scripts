@@ -1,4 +1,4 @@
-SOURCES=2dot accumulate body dv prefixlog rpmlist soco utc2date
+SOURCES=2dot accumulate body combinations dv factorial permutations prefixlog rpmlist soco utc2date
 PREFIX?=/usr/local/bin
 
 all:

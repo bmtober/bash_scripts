@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dc <<< "$(permutations ${1} ${2}) $(factorial ${2}) /p"

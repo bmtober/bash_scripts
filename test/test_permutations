@@ -1,0 +1,25 @@
+. assertion
+
+[[ -d results ]] || mkdir results
+
+echo "Testing permutations"
+permutations  5 2  >  results/permutations.out
+permutations  5 3  >> results/permutations.out
+permutations  5 4  >> results/permutations.out
+permutations 10 0  >> results/permutations.out
+permutations 10 1  >> results/permutations.out
+permutations 10 2  >> results/permutations.out
+permutations 10 3  >> results/permutations.out
+permutations 10 4  >> results/permutations.out
+permutations 10 5  >> results/permutations.out
+permutations 10 6  >> results/permutations.out
+permutations 10 7  >> results/permutations.out
+permutations 10 8  >> results/permutations.out
+permutations 10 9  >> results/permutations.out
+
+echo
+assert 'diff expected/permutations.out results/permutations.out &> /dev/null'
+
+echo
+echo "PASS: ${success_count}"
+echo "FAIL: ${failure_count}"

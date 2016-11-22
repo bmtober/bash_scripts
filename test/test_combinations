@@ -1,0 +1,19 @@
+. assertion
+
+[[ -d results ]] || mkdir results
+
+echo "Testing combinations"
+combinations  2 1  >  results/combinations.out
+combinations  2 2  >> results/combinations.out
+combinations  3 1  >> results/combinations.out
+combinations  3 2  >> results/combinations.out
+combinations  3 3  >> results/combinations.out
+combinations  4 2  >> results/combinations.out
+combinations  6 3  >> results/combinations.out
+
+echo
+assert 'diff expected/combinations.out results/combinations.out &> /dev/null'
+
+echo
+echo "PASS: ${success_count}"
+echo "FAIL: ${failure_count}"
