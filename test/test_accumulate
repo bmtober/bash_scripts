@@ -3,9 +3,9 @@
 [[ -d results ]] || mkdir results
 
 echo "Testing accumulate"
-../accumulate data/accumulate.dat > results/accumulate.1
-../accumulate < data/accumulate.dat > results/accumulate.2
-cat data/accumulate.dat | ../accumulate  > results/accumulate.3
+accumulate data/accumulate.dat > results/accumulate.1
+accumulate < data/accumulate.dat > results/accumulate.2
+cat data/accumulate.dat | accumulate  > results/accumulate.3
 
 echo
 assert 'diff expected/accumulate.out results/accumulate.1 &> /dev/null'

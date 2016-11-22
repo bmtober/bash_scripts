@@ -4,11 +4,11 @@
 
 echo "Testing body"
 
-../body data/body.dat > results/body.1
-../body < data/body.dat > results/body.1
-cat data/body.dat | ../body > results/body.1
-../body -s 3 data/body.dat > results/body.2
-../body -s 3 -e 5 data/body.dat > results/body.3
+body data/body.dat > results/body.1
+body < data/body.dat > results/body.1
+cat data/body.dat | body > results/body.1
+body -s 3 data/body.dat > results/body.2
+body -s 3 -e 5 data/body.dat > results/body.3
 
 
 
