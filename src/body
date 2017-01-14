@@ -53,7 +53,9 @@ do
   shift
 done  
 
-cmd="tail -n +${start}"
-[ -n "${end}" ] && cmd="${cmd} | head -n $(( end - start ))" 
-cmd="cat ${infile} | ${cmd}"
+unset cmd
+[ -n "${start}" ] && cmd="NR>=${start}"
+[ -n "${end}" ]   && cmd="$cmd "'&&'" NR<=${end}"
+cmd="cat ${infile} | awk '${cmd}'"
 eval ${cmd}
+
